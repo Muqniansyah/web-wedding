@@ -377,6 +377,39 @@ footer li {
   margin: 0.5rem;
 }
 
+.audio-icon-wrapper {
+  width: 4rem;
+  height: 4rem;
+  font-size: 4rem;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2rem;
+  cursor: pointer;
+  color: white;
+  opacity: 0.5;
+  /* jika bertemu warna yang sama maka ubah warnanya jadi warna yang berlawanan. */
+  mix-blend-mode: difference;
+  /* membuat animasi supaya bergerak dengan berputar */
+  animation: rotating 4s linear infinite;
+  /* ubah poros berputar animasi supaya ditengah */
+  transform-origin: center;
+  /* supaya icon berada ditengah pembungkusnya yaitu audio-icon-wrapper */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+}
+
+/* Animation */
+@keyframes rotating {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* Media Query */
 /* Extra large */
 @media (max-width: 1200px) {
